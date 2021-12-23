@@ -32,7 +32,7 @@ const menus = shallowRef([
 </script>
 
 <template>
-  <List>
+  <List class="overflow-y-auto">
     <ListItem
       v-for="(item, idx) in menus"
       :key="idx"

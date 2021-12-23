@@ -1,6 +1,17 @@
 <script setup lang="ts">
+import { useLayoutStore } from '@/stores/layout';
 import IconMenu from '../icons/IconMenu.vue';
 import IconUser from '../icons/IconUser.vue';
+
+const layout = useLayoutStore();
+
+const toggleMenu = () => {
+  if (window.innerWidth < 600) {
+    layout.toggleSidebar();
+  } else {
+    layout.toggleMini();
+  }
+};
 </script>
 
 <template>
@@ -16,6 +27,7 @@ import IconUser from '../icons/IconUser.vue';
           transition
           duration-300
         "
+        @click="toggleMenu"
       >
         <IconMenu />
       </button>

@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import IconUser from '../icons/IconUser.vue';
+
+interface Props {
+  mini?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  mini: false,
+});
 </script>
 
 <template>
@@ -17,10 +25,11 @@ import IconUser from '../icons/IconUser.vue';
     "
   >
     <a class="flex gap-2 hover:bg-gray-800 px-2 py-2 rounded-md">
-      <IconUser class="w-5 h-5" />
-      <span class="login-user">John Doe</span>
+      <IconUser />
+      <span v-if="!mini" class="login-user">John Doe</span>
     </a>
     <button
+      v-if="!mini"
       class="
         btn-logout
         appearance-none

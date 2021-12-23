@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import IconBreaker from '../icons/IconBreaker.vue';
+import IconX from '../icons/IconX.vue';
+
+interface Props {
+  mini?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  mini: false,
+});
+
+const emit = defineEmits(['close']);
 </script>
 
 <template>
@@ -22,26 +33,11 @@ import IconBreaker from '../icons/IconBreaker.vue';
   >
     <IconBreaker />
 
-    <span class="brand flex-grow font-bold">Brand</span>
+    <span v-if="!mini" class="brand flex-grow font-bold">Brand</span>
 
-    <!-- menu mini toggler -->
-    <!-- <label
-        for="mini-toggle"
-        class="
-          arrow-toggler
-          block
-          py-2
-          relative
-          transition
-          duration-300
-          rounded-md
-          px-2
-          cursor-pointer
-          hover:bg-gray-800
-        "
-      >
-        <IconChevronDoubleLeftSolid />
-      </label> -->
+    <button class="appearance-none sm:hidden" @click="emit('close')">
+      <IconX />
+    </button>
   </header>
 </template>
 
