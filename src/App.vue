@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import AppHeader from './components/layout/AppHeader.vue';
-import AppSidebar from './components/layout/AppSidebar.vue';
+import Sidebar from './components/layout/Sidebar.vue';
 </script>
 
 <template>
   <div class="flex">
-    <AppSidebar />
+    <Sidebar />
 
     <main class="flex-grow">
       <AppHeader />

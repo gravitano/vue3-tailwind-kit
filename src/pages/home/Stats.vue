@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { shallowRef } from 'vue';
 import IconBreaker from '@/components/icons/IconBreaker.vue';
 import IconDatabase from '@/components/icons/IconDatabase.vue';
 import IconUser from '@/components/icons/IconUser.vue';
 import IconHome from '@/components/icons/IconHome.vue';
 
-const stats = ref([
+const stats = shallowRef([
   {
     text: 'User',
     value: '123',
