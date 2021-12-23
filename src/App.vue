@@ -7,7 +7,7 @@ import AppSidebar from './components/layout/AppSidebar.vue';
   <div class="flex">
     <AppSidebar />
 
-    <main>
+    <main class="flex-grow">
       <AppHeader />
 
       <div class="px-7 py-4">
