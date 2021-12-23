@@ -21,6 +21,7 @@ const onResize = () => {
 };
 
 onMounted(() => {
+  onResize();
   window.addEventListener('resize', onResize);
 });
 
