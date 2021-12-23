@@ -37,7 +37,7 @@ watch(isOpen, (val) => {
 </script>
 
 <template>
-  <li @click="isOpen = !isOpen">
+  <li>
     <a
       class="
         cursor-pointer
@@ -53,6 +53,7 @@ watch(isOpen, (val) => {
         hover:text-gray-300
         select-none
       "
+      @click="isOpen = !isOpen"
     >
       <slot name="icon">
         <div class="w-5">
