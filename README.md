@@ -1,6 +1,9 @@
-# vue3-tailwind-kit
+# Vue 3 Tailwind Kit
 
-This template should help get you started developing with Vue 3 in Vite.
+A minimal Vue 3 + Tailwind Starter Kit.
+
+> Work in progress
+
 
 ## Recommended IDE Setup
 
