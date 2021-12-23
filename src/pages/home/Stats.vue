@@ -34,11 +34,6 @@ const stats = ref([
 </script>
 
 <template>
-  <div class="mb-5">
-    <h1 class="font-semibold text-lg">Dashboard</h1>
-    <p class="text-gray-500 font-semibold">Overview</p>
-  </div>
-
   <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-5">
     <div
       v-for="stat in stats"
@@ -53,16 +48,5 @@ const stats = ref([
         <h4 class="text-2xl font-bold text-gray-700">{{ stat.value }}</h4>
       </div>
     </div>
-  </div>
-
-  <div class="bg-white shadow-md p-4 rounded-md gap-4 space-y-2">
-    <h3 class="font-semibold">Overview</h3>
-
-    <p class="text-gray-500">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-      reprehenderit impedit non aspernatur error neque repudiandae deleniti,
-      enim asperiores perferendis delectus velit quo itaque sed officia natus
-      praesentium totam. Voluptates!
-    </p>
   </div>
 </template>
