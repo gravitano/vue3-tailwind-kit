@@ -4,7 +4,7 @@ import IconUser from '../icons/IconUser.vue';
 </script>
 
 <template>
-  <div class="py-2 px-4 shadow-md ml-72 bg-white">
+  <div class="py-2 px-4 shadow-md bg-white">
     <div class="flex items-center justify-between gap-6">
       <button
         type="button"

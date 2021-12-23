@@ -39,7 +39,7 @@ const stats = ref([
     <p class="text-gray-500 font-semibold">Overview</p>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 mb-5">
+  <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-5">
     <div
       v-for="stat in stats"
       :key="stat.text"

@@ -10,12 +10,12 @@ import IconChevronDown from '../icons/IconChevronDown.vue';
   <div class="bg-black inset-0 fixed opacity-40 hidden"></div>
   <aside
     class="
-      fixed
+      hidden
       left-0
       top-0
       bottom-0
       w-10/12
-      flex flex-col
+      sm:flex sm:flex-col
       items-center
       transition-all
       duration-300
@@ -23,6 +23,7 @@ import IconChevronDown from '../icons/IconChevronDown.vue';
       text-white
       h-full
       sm:h-screen sm:w-72
+      flex-shrink-0
     "
   >
     <!-- brand -->
