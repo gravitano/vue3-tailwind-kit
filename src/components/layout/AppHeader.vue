@@ -1,25 +1,43 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import IconMenu from '../icons/IconMenu.vue';
+import IconUser from '../icons/IconUser.vue';
+</script>
 
 <template>
-  <div class="py-3 shadow-md">
-    <div class="container mx-auto flex items-center gap-6">
-      <a href="#" class="font-bold text-blue-500 text-lg"> Vue 3 </a>
-      <div class="space-x-2">
-        <router-link
-          exact-active-class="text-blue-500"
-          to="/"
-          class="font-semibold hover:text-blue-500"
-        >
-          Home
-        </router-link>
-        <router-link
-          exact-active-class="text-blue-500"
-          to="/about"
-          class="font-semibold hover:text-blue-500"
-        >
-          About
-        </router-link>
-      </div>
+  <div class="py-2 px-4 shadow-md ml-72 bg-white">
+    <div class="flex items-center justify-between gap-6">
+      <button
+        type="button"
+        class="
+          appearance-none
+          hover:bg-gray-200
+          p-2
+          rounded
+          transition
+          duration-300
+        "
+      >
+        <IconMenu />
+      </button>
+
+      <a
+        href="#"
+        class="
+          flex
+          gap-2
+          px-4
+          py-2
+          rounded
+          items-center
+          font-semibold
+          hover:bg-gray-200
+          transition
+          duration-300
+        "
+      >
+        <IconUser />
+        <span>John Doe</span>
+      </a>
     </div>
   </div>
 </template>
