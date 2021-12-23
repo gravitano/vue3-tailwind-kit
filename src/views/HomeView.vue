@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+    ipsa tenetur consequatur a hic unde, saepe repudiandae debitis sint neque,
+    tempora vitae nemo nam deserunt minus corporis odio odit enim.
+  </div>
 </template>
