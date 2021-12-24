@@ -63,7 +63,13 @@ watch(isOpen, (val) => {
       <span class="truncate link-item-text"> {{ text }}</span>
       <div class="flex-grow"></div>
       <slot name="icon.right">
-        <IconChevronDown v-if="children.length > 0" />
+        <IconChevronDown
+          v-if="children.length > 0"
+          :class="[
+            'transform transition-transform duration-300',
+            isOpen ? 'rotate-180' : '',
+          ]"
+        />
       </slot>
     </a>
     <slot name="items">
