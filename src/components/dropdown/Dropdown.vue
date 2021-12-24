@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
-import { ChevronDownIcon } from '@heroicons/vue/solid';
 import IconChevronDown from '../icons/IconChevronDown.vue';
 import IconHome from '../icons/IconHome.vue';
 
