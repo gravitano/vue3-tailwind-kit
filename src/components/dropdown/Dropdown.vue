@@ -3,10 +3,20 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
 import { ChevronDownIcon } from '@heroicons/vue/solid';
 import IconChevronDown from '../icons/IconChevronDown.vue';
 import IconHome from '../icons/IconHome.vue';
+
+interface Props {
+  top?: boolean;
+  left?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  top: false,
+  left: false,
+});
 </script>
 
 <template>
-  <div class="w-56 text-right">
+  <div class="text-right">
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton
@@ -37,10 +47,7 @@ import IconHome from '../icons/IconHome.vue';
         <MenuItems
           class="
             absolute
-            right-0
             w-56
-            mt-2
-            origin-top-right
             bg-white
             divide-y divide-gray-100
             rounded-md
@@ -48,6 +55,10 @@ import IconHome from '../icons/IconHome.vue';
             ring-1 ring-black ring-opacity-5
             focus:outline-none
           "
+          :class="[
+            top ? 'origin-bottom-right bottom-12' : 'mt-2 origin-top-right',
+            left ? 'left-0' : 'right-0',
+          ]"
         >
           <slot />
         </MenuItems>
