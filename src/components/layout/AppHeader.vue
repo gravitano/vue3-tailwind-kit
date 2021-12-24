@@ -2,6 +2,10 @@
 import { useLayoutStore } from '@/stores/layout';
 import IconMenu from '../icons/IconMenu.vue';
 import IconUser from '../icons/IconUser.vue';
+import IconCog from '../icons/IconCog.vue';
+import IconLogout from '../icons/IconLogout.vue';
+import Dropdown from '../dropdown/Dropdown.vue';
+import DropdownItem from '../dropdown/DropdownItem.vue';
 
 const layout = useLayoutStore();
 
@@ -32,24 +36,37 @@ const toggleMenu = () => {
         <IconMenu />
       </button>
 
-      <a
-        href="#"
-        class="
-          flex
-          gap-2
-          px-4
-          py-2
-          rounded
-          items-center
-          font-semibold
-          hover:bg-gray-200
-          transition
-          duration-300
-        "
-      >
-        <IconUser />
-        <span>John Doe</span>
-      </a>
+      <Dropdown>
+        <template #activator>
+          <span
+            class="
+              flex
+              gap-2
+              px-4
+              py-2
+              rounded
+              items-center
+              font-semibold
+              hover:bg-gray-200
+              transition
+              duration-300
+            "
+          >
+            <IconUser />
+            <span>John Doe</span>
+          </span>
+        </template>
+
+        <template #default>
+          <div class="p-1">
+            <DropdownItem :icon="IconUser"> Profile </DropdownItem>
+            <DropdownItem :icon="IconCog"> Preferences </DropdownItem>
+          </div>
+          <div class="p-1">
+            <DropdownItem :icon="IconLogout"> Logout </DropdownItem>
+          </div>
+        </template>
+      </Dropdown>
     </div>
   </div>
 </template>
